@@ -1,15 +1,14 @@
 package com.example.twin3.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.Set;
+
 @Entity
 @Getter
 @Setter
@@ -21,5 +20,9 @@ public class Reservation {
     private String idReservation;
     private Date anneeUniversitaire;
     private boolean estvalide;
+    @ManyToMany
+    Set<Etudiant> etudiantSet;
+    @ManyToOne
+    Chambre chambre;
 
 }
