@@ -23,5 +23,6 @@ public class Etudiant {
     private long cin;
     private String ecole;
     private Date dateNaissance;
-
+    @ManyToMany
+    Set<Reservation> reservations;
 }

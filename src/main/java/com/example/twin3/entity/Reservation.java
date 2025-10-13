@@ -20,7 +20,7 @@ public class Reservation {
     private String idReservation;
     private Date anneeUniversitaire;
     private boolean estvalide;
-    @ManyToMany
+    @ManyToMany(mappedBy = "reservations")
     Set<Etudiant> etudiantSet;
     @ManyToOne
     Chambre chambre;
