@@ -22,6 +22,6 @@ public class Chambre {
     TypeChambre typeChambre;
     @ManyToOne
     Bloc bloc;
-    @OneToMany(mappedBy = "chambre")
+    @OneToMany
     Set<Reservation>  reservations;
 }
