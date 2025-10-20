@@ -15,7 +15,7 @@ public class Universite {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idUniversite;
-    private String nomUniversité;
+    private String nomUniversite;
     private String adresse;
     @OneToOne
     Foyer foyer;
