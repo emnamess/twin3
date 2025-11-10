@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface UniversiteInterface {
   public Universite affecterFoyerAUniversite(Long idFoyer, String nomUniversite);
-  public Universite desaffecterFoyerAUniversite(Long idFoyer);
+  public Universite desaffecterFoyerAUniversite(Long idUniversite);
 }

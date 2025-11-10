@@ -21,13 +21,21 @@ public class UniversiteService implements UniversiteInterface {
 
     @Override
     public Universite affecterFoyerAUniversite(Long idFoyer, String nomUniversite) {
+        //recherche et récupération
         Universite universite = universiteRepo.findUniversiteByNomUniversite(nomUniversite);
         Foyer foyer = foyerRepo.findById(idFoyer).orElse(null);
-        return null;
+        //assign parent.setFils()
+        universite.setFoyer(foyer);
+        //persistence
+        return universiteRepo.save(universite);
     }
 
     @Override
-    public Universite desaffecterFoyerAUniversite(Long idFoyer) {
-        return null;
+    public Universite desaffecterFoyerAUniversite(Long idUniversite) {
+        //recherche et récupération
+        Universite universite = universiteRepo.findById(idUniversite).orElse(null);
+        universite.setFoyer(null);
+        return universiteRepo.save(universite);
+
     }
 }
