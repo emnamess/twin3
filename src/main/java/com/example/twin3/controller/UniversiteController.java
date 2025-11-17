@@ -15,10 +15,10 @@ public class UniversiteController {
     public UniversiteController(UniversiteService universiteService) {
     this.universiteInterface = universiteService;
     }
-  @PutMapping("/universite/{id_foyer}/{nom_universite}")
-  public Universite affecterFoyerAuniversite(@PathVariable("id_foyer") Long idFoyer, @PathVariable("nom_universite") String nomUniversite) {
-        return universiteInterface.affecterFoyerAUniversite(idFoyer, nomUniversite);
-  }
+      @PutMapping("/universite/{id_foyer}/{nom_universite}")
+      public Universite affecterFoyerAuniversite(@PathVariable("id_foyer") Long idFoyer, @PathVariable("nom_universite") String nomUniversite) {
+            return universiteInterface.affecterFoyerAUniversite(idFoyer, nomUniversite);
+      }
     @PutMapping("/universite/{id_universite}")
     public Universite desaffecterFoyerAuniversite(@PathVariable("id_universite") Long idUniversite) {
         return universiteInterface.desaffecterFoyerAUniversite(idUniversite);
